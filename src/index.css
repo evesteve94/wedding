@@ -253,6 +253,7 @@ textarea {
 input::placeholder,
 textarea::placeholder{
   color: var(--text-color);
+  font-family: monospace;
 }
 
 input:focus,
