@@ -13,6 +13,9 @@ const Navbar = () => {
                 ? "rgba(211, 227, 226, 1)"
                 : "rgba(102, 198, 194, 1)",
               textDecoration: "none",
+              fontSize: "1.3rem",
+              letterSpacing: "1px",
+              padding: "0 0.5rem",
             })}
           >
             Home
@@ -26,6 +29,9 @@ const Navbar = () => {
                 ? "rgba(211, 227, 226, 1)"
                 : "rgba(102, 198, 194, 1)",
               textDecoration: "none",
+              fontSize: "1.3rem",
+              letterSpacing: "1px",
+              padding: "0 0.5rem",
             })}
           >
             Info
@@ -39,6 +45,9 @@ const Navbar = () => {
                 ? "rgba(211, 227, 226, 1)"
                 : "rgba(102, 198, 194, 1)",
               textDecoration: "none",
+              fontSize: "1.3rem",
+              letterSpacing: "1px",
+              padding: "0 0.5rem",
             })}
           >
             Schedule
@@ -52,6 +61,9 @@ const Navbar = () => {
                 ? "rgba(211, 227, 226, 1)"
                 : "rgba(102, 198, 194, 1)",
               textDecoration: "none",
+              fontSize: "1.3rem",
+              letterSpacing: "1px",
+              padding: "0 0.5rem",
             })}
           >
             Guest Book
@@ -65,6 +77,9 @@ const Navbar = () => {
                 ? "rgba(211, 227, 226, 1)"
                 : "rgba(102, 198, 194, 1)",
               textDecoration: "none",
+              fontSize: "1.3rem",
+              letterSpacing: "1px",
+              padding: "0 0.5rem",
             })}
           >
             Gallery
