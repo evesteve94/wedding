@@ -1,0 +1,222 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color:transparent;
+  color: var(--text-color);
+}
+
+:root {
+  /* Define your custom colors as CSS variables */
+  --primary-color: rgba(1, 9, 45, 1); /* Example primary color (blue) */
+  --secondary-color: rgba(69, 131, 190, 1); /* Example secondary color (gray) */
+  --accent-color: rgba(16, 95, 134, 1); /* Example accent color (yellow) */
+  --background-color:rgba(31, 30, 30, 0.523); /* Example background color */
+  --text-color: rgba(102, 198, 194, 1); /* Example text color (dark gray) */
+}
+
+@font-face {
+  font-family: 'MartinFont'; /* Name your font family */
+  src: url('./assets/fonts/martindemoregular-bwggg-webfont.woff2') format('woff2'), /* Specify the path to your WOFF2 font file */
+       url('./assets/fonts/martindemoregular-bwggg-webfont.woff') format('woff'); /* Specify the path to your WOFF font file */
+  /* You can include additional font formats and their paths if necessary */
+}
+
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-image: url(./assets/img/background2.png);
+  background-size:  contain; /* Stretch the background image to cover the entire width and maintain its aspect ratio */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent the background image from repeating */
+  background-attachment: fixed;
+  min-height: 500px; /* Set a minimum height to ensure the background image is visible */
+  padding: 0;
+  /* overflow: hidden; */
+  background-color: var(--primary-color);
+
+}
+
+
+button {
+  border: none;
+}
+
+
+/* HEADER HEADER HEADER */
+header {
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  color: var(--text-color);
+  font-family: 'MartinFont', sans-serif;
+  background-color:var(--background-color);
+}
+
+h1 {
+  letter-spacing: 3px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-top: 1.7rem;
+}
+
+h2,
+h3 {
+  font-family: 'MartinFont', sans-serif;
+  font-weight: 100;
+  letter-spacing: 1px;
+  text-align: center;
+  /* margin-bottom: 1rem; */
+  }
+
+nav {
+  width: 100%;
+  /* padding: 1rem; */
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* MAIN MAIN MAIN */
+main {
+  flex: 1; /* Allow main content to grow and take remaining space */
+  overflow-y: auto; /* Enable vertical scrolling for main content */
+  padding: 1rem; /* Add padding as needed */
+}
+
+/* HOME HOME HOME */
+
+.welcome-text {
+  background-color: var(--background-color);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 1000px;
+  border-radius: 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  height: 100%;
+}
+
+.photo.div {
+  max-width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.homepage-img{
+  height: 150px;
+  border-radius: 25%;
+}
+
+.welcome-text ul {
+  list-style:circle;
+  text-align: left;
+  max-width: 230px;
+}
+
+/* GUEST BOOK GUEST BOOK GUEST BOOK */
+.guest-book {
+  background-color: var(--background-color);
+  border-radius: 1rem;
+  max-width: 1000px;
+}
+
+
+
+.message-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: rgba(250, 235, 215, 0.71);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  max-width: 150px;
+  min-width: 150px;
+}
+
+.message h3, .message p {
+  color: var(--primary-color);
+
+}
+
+.post-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+input {
+  max-width: 300px;
+  border-bottom: 2px solid var(--text-color);
+  border-radius: 5px;
+}
+
+textarea {
+  height: 200px;
+  width: 300px;
+  border: 2px solid var(--text-color);
+  border-radius: 5px;
+}
+
+.add-post {
+  font-size: 2rem;
+}
+
+/* SCHEDULE */
+
+.schedule-page,
+.info-page {
+  max-width: 1000px;
+  border-radius: 1rem;
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+
+/* FOOTER FOOTER FOOTER */
+footer {
+
+  width: 100%; /* Take the full width of the viewport */
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  color: var(--text-color);
+  font-family: 'MartinFont', sans-serif;
+  background-color: var(--background-color);
+}
