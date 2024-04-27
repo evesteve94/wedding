@@ -34,12 +34,12 @@ const HomePage = () => {
         </ul>
         <div className="photo-div">
           <img className="homepage-img" src={banana} alt="" />
-          <img
+          {/* <img
             style={{ marginLeft: "2rem" }}
             className="homepage-img"
             src={bubbles}
             alt=""
-          />
+          /> */}
         </div>
       </div>
     </main>
