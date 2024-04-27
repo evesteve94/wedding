@@ -9,6 +9,7 @@ const Footer = () => {
         {" "}
         <span style={{ fontSize: "1.7rem" }}>&copy;</span>evesteve {currentYear}
       </p>
+      <p>Design: E.T.</p>
     </footer>
   );
 };
