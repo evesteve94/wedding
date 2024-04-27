@@ -1,91 +1,50 @@
-import React from "react";
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <nav>
-      <ul className="nav-list">
+      <ul className={`nav-list ${isOpen ? "open" : ""}`}>
         <li>
-          <NavLink
-            to="/"
-            style={({ isActive }) => ({
-              color: isActive
-                ? "rgba(211, 227, 226, 1)"
-                : "rgba(102, 198, 194, 1)",
-              textDecoration: "none",
-              fontSize: "1.3rem",
-              letterSpacing: "1px",
-              padding: "0 0.5rem",
-            })}
-          >
+          <NavLink to="/" activeclassname="active" onClick={toggleMenu}>
             Home
           </NavLink>
         </li>
         <li>
-          <NavLink
-            to="/info"
-            style={({ isActive }) => ({
-              color: isActive
-                ? "rgba(211, 227, 226, 1)"
-                : "rgba(102, 198, 194, 1)",
-              textDecoration: "none",
-              fontSize: "1.3rem",
-              letterSpacing: "1px",
-              padding: "0 0.5rem",
-            })}
-          >
+          <NavLink to="/info" activeclassname="active" onClick={toggleMenu}>
             Info
           </NavLink>
         </li>
         <li>
-          <NavLink
-            to="/schedule"
-            style={({ isActive }) => ({
-              color: isActive
-                ? "rgba(211, 227, 226, 1)"
-                : "rgba(102, 198, 194, 1)",
-              textDecoration: "none",
-              fontSize: "1.3rem",
-              letterSpacing: "1px",
-              padding: "0 0.5rem",
-            })}
-          >
+          <NavLink to="/schedule" activeclassname="active" onClick={toggleMenu}>
             Schedule
           </NavLink>
         </li>
         <li>
           <NavLink
             to="/guest-book"
-            style={({ isActive }) => ({
-              color: isActive
-                ? "rgba(211, 227, 226, 1)"
-                : "rgba(102, 198, 194, 1)",
-              textDecoration: "none",
-              fontSize: "1.3rem",
-              letterSpacing: "1px",
-              padding: "0 0.5rem",
-            })}
+            activeclassname="active"
+            onClick={toggleMenu}
           >
             Guest Book
           </NavLink>
         </li>
         <li>
-          <NavLink
-            to="/gallery"
-            style={({ isActive }) => ({
-              color: isActive
-                ? "rgba(211, 227, 226, 1)"
-                : "rgba(102, 198, 194, 1)",
-              textDecoration: "none",
-              fontSize: "1.3rem",
-              letterSpacing: "1px",
-              padding: "0 0.5rem",
-            })}
-          >
+          <NavLink to="/gallery" activeclassname="active" onClick={toggleMenu}>
             Gallery
           </NavLink>
         </li>
       </ul>
+      <button className="dropdown-toggle" onClick={toggleMenu}>
+        {isOpen ? <FaTimes /> : <FaBars />}
+      </button>
     </nav>
   );
 };

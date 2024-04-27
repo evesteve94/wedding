@@ -5,7 +5,6 @@ const Header = () => {
   return (
     <header>
       <h1>Viktor & Emma</h1>
-      <p style={{ fontSize: "1.2rem" }}>7 - 9 juni 2024</p>
       <Navbar />
     </header>
   );

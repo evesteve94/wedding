@@ -11,7 +11,7 @@
   --primary-color: rgba(1, 9, 45, 1); /* Example primary color (blue) */
   --secondary-color: rgba(69, 131, 190, 1); /* Example secondary color (gray) */
   --accent-color: rgba(16, 95, 134, 1); /* Example accent color (yellow) */
-  --background-color:rgba(31, 30, 30, 0.523); /* Example background color */
+  --background-color:rgba(1, 9, 45, 0.495); /* Example background color */
   --text-color: rgba(102, 198, 194, 1); /* Example text color (dark gray) */
 }
 
@@ -27,11 +27,8 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  background-image: url(./assets/img/background2.png);
-  background-size:  contain; /* Stretch the background image to cover the entire width and maintain its aspect ratio */
-  background-position: center; /* Center the background image */
-  background-repeat: no-repeat; /* Prevent the background image from repeating */
-  background-attachment: fixed;
+  /* justify-content: space-between; */
+  align-items: center;
   min-height: 500px; /* Set a minimum height to ensure the background image is visible */
   padding: 0;
   /* overflow: hidden; */
@@ -57,6 +54,8 @@ header {
   color: var(--text-color);
   font-family: 'MartinFont', sans-serif;
   background-color:var(--background-color);
+  border-bottom: 1px solid var(--text-color);
+  border-radius: 1rem;
 }
 
 h1 {
@@ -75,27 +74,81 @@ h3 {
   /* margin-bottom: 1rem; */
   }
 
-nav {
-  width: 100%;
-  /* border-top: 1px solid var(--text-color); */
-  /* border-bottom: 1px solid var(--text-color); */
-  /* padding: 1rem; */
-}
+  .nav-list {
+    list-style-type: none;
+    padding: 1rem;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .nav-list li {
+    padding: 0.5rem;
+    text-align: right;
+    border-top: 1px solid var(--text-color);
+  }
+  
+  .nav-list li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    padding:0.5rem;
+    /* background-color: var(--primary-color); */
+  }
 
-.nav-list {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.8rem;
-  /* gap: 1.5rem; */
-}
+  
+  .nav-list li a.active {
+    color: rgba(211, 227, 226, 1);
+  }
+  
+  .dropdown-toggle {
+    display: none;
+  }
+  
+  @media (max-width: 768px) {
+    .nav-list {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 80px;
+      left: 0;
+      background-color: var(--primary-color);;
+      width: 100%;
+      padding: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+    }
+  
+    .nav-list.open {
+      display: flex;
+    }
+    
+  
+    .dropdown-toggle {
+      display: block;
+      position: absolute;
+      top: 37px;
+      right: 20px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1.5rem;
+    }
+  }
+  
 
 /* MAIN MAIN MAIN */
 main {
-  flex: 1; /* Allow main content to grow and take remaining space */
   overflow-y: auto; /* Enable vertical scrolling for main content */
-  padding: 0.5rem; /* Add padding as needed */
+  background-image: url(./assets/img/background2.png);
+  background-size:  contain; /* Stretch the background image to cover the entire width and maintain its aspect ratio */
+  background-position:center; 
+  background-repeat: no-repeat; /* Prevent the background image from repeating */
+  background-attachment: fixed;
+  font-family:Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
 }
 
 /* HOME HOME HOME */
@@ -112,8 +165,8 @@ main {
   max-width: 1000px;
   border-radius: 1rem;
   font-size: 1rem;
-  line-height: 1.5;
   height: 100%;
+  padding: 1rem;
 }
 
 .photo.div {
@@ -140,6 +193,7 @@ main {
   background-color: var(--background-color);
   border-radius: 1rem;
   max-width: 1000px;
+  padding: 1rem;
 }
 
 
@@ -154,11 +208,12 @@ main {
 .message {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+  align-items: start;
   gap: 0.5rem;
-  background-color: rgba(250, 235, 215, 0.71);
-  padding: 0.5rem;
-  border-radius: 0.5rem;
+  background-color: rgba(250, 235, 215, 0.854);
+  padding: 1rem;
+  border-radius: 0.25rem;
   max-width: 150px;
   min-width: 150px;
 }
@@ -182,6 +237,8 @@ input {
   max-width: 300px;
   border-bottom: 2px solid var(--text-color);
   border-radius: 5px;
+  padding: 0.5rem;
+  font-size: 1rem;
 }
 
 textarea {
@@ -189,6 +246,19 @@ textarea {
   width: 300px;
   border: 2px solid var(--text-color);
   border-radius: 5px;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+input::placeholder,
+textarea::placeholder{
+  color: var(--text-color);
+}
+
+input:focus,
+textarea:focus{
+  background-color: var(--primary-color);
+  transform: scale(1.1);
 }
 
 .add-post {
@@ -224,4 +294,6 @@ footer {
   color: var(--text-color);
   font-family: 'MartinFont', sans-serif;
   background-color: var(--background-color);
+  border-top: 1px solid var(--text-color);
+  border-radius: 1rem;
 }

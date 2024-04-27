@@ -13,7 +13,7 @@ import {
   updateDoc,
   Timestamp,
 } from "firebase/firestore";
-import { FaPlusCircle, FaHeart, FaBook } from "react-icons/fa";
+import { FaPlusCircle, FaHeart } from "react-icons/fa";
 
 const GuestBookPage = () => {
   // Lagra filmerna från firebase så vi kan visa dem - READ
@@ -147,7 +147,7 @@ const GuestBookPage = () => {
           />
           <button className="add-post" onClick={handleAddPost}>
             {" "}
-            <FaHeart /> <FaPlusCircle /> <FaHeart />
+            <FaPlusCircle />
           </button>
         </div>
       </div>
