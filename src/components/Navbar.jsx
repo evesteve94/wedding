@@ -24,7 +24,7 @@ const Navbar = () => {
         </li>
         <li>
           <NavLink to="/schedule" activeclassname="active" onClick={toggleMenu}>
-            Schedule
+            Schema
           </NavLink>
         </li>
         <li>
@@ -33,12 +33,17 @@ const Navbar = () => {
             activeclassname="active"
             onClick={toggleMenu}
           >
-            Guest Book
+            Gästbok
           </NavLink>
         </li>
         <li>
           <NavLink to="/gallery" activeclassname="active" onClick={toggleMenu}>
-            Gallery
+            Galleri
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/login" activeclassname="active" onClick={toggleMenu}>
+            Login
           </NavLink>
         </li>
       </ul>

@@ -5,6 +5,7 @@ import InfoPage from "../pages/InfoPage";
 import SchedulePage from "../pages/SchedulePage";
 import GuestBookPage from "../pages/GuestBookPage";
 import GalleryPage from "../pages/GalleryPage";
+import Authentication from "../components/Authenticaction";
 
 const Layout = () => {
   return (
@@ -15,6 +16,7 @@ const Layout = () => {
         <Route path="/schedule" element={<SchedulePage />} />
         <Route path="/guest-book" element={<GuestBookPage />} />
         <Route path="/gallery" element={<GalleryPage />} />
+        <Route path="/login" element={<Authentication />} />
       </Routes>
     </>
   );
