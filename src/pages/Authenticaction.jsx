@@ -81,7 +81,6 @@ const Authentication = () => {
       await signOut(auth);
       // Update state to show buttons after successful sign-out
       setShowButtons(true);
-      location.reload();
     } catch (err) {
       console.error(err);
     }
