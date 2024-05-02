@@ -23,7 +23,7 @@ const GalleryPage = () => {
         <p style={{ fontSize: "3rem" }}>
           <FaWhatsapp />
         </p>
-        <p>+46 738 77 411</p>
+        <p>+46 738 774 11 88</p>
       </div>
     </main>
   );

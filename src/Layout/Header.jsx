@@ -5,6 +5,7 @@ const Header = () => {
   return (
     <header>
       <h1>Viktor & Emma</h1>
+      <p>8 juni 2024</p>
       <Navbar />
     </header>
   );

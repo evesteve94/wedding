@@ -6,7 +6,6 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   sendEmailVerification,
-  reload,
 } from "firebase/auth";
 
 const Authentication = () => {
@@ -98,7 +97,7 @@ const Authentication = () => {
   return (
     <main>
       <div className="login-page">
-        <h2>Login Page</h2>
+        <h2>Login</h2>
         <p>
           Skapa ett konto och logga in för att kunna se allt innehåll och skriva
           i Gästboken
@@ -116,9 +115,9 @@ const Authentication = () => {
 
         {showButtons && !auth?.currentUser?.email && (
           <div className="btn-div">
-            <button onClick={toggleCreateAccountForm}>Create Account</button>
-            <button onClick={toggleSignInForm}>Sign In</button>
-            <button onClick={signInWithGoogle}>Sign in With Google</button>
+            <button onClick={toggleCreateAccountForm}>Skapa Konto</button>
+            <button onClick={toggleSignInForm}>Logga In</button>
+            {/* <button onClick={signInWithGoogle}>Sign in With Google</button> */}
           </div>
         )}
 
@@ -130,42 +129,47 @@ const Authentication = () => {
               placeholder="Email..."
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              required
             />
             <input
               type="password"
               placeholder="Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              required
             />
             <input
               type="password"
               placeholder="Confirm Password"
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
+              required
             />
-            <button onClick={handleCreateUser}>Create Account</button>
-            <button onClick={goBack}>Back</button>
+            <button onClick={handleCreateUser}>Skapa Konto</button>
+            <button onClick={goBack}>Tillbaka</button>
             {error && <p className="error">{error}</p>}
           </div>
         )}
 
         {showSignInForm && (
           <div className="form">
-            <h3>Sign In</h3>
+            <h3>Logga In</h3>
             <input
               type="email"
               placeholder="Email..."
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              required
             />
             <input
               type="password"
               placeholder="Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              required
             />
-            <button onClick={handleSignIn}>Sign In</button>
-            <button onClick={goBack}>Back</button>
+            <button onClick={handleSignIn}>Logga In</button>
+            <button onClick={goBack}>Tillbaka</button>
             {error && <p className="error">{error}</p>}
           </div>
         )}

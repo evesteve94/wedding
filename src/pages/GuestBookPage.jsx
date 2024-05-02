@@ -93,22 +93,22 @@ const GuestBookPage = () => {
             ))}
           </ul>
           <div className="post-form">
-            <h3>Add Message</h3>
+            <h3>Skriv ett meddelande</h3>
             <input
               type="text"
               value={newPostName}
               onChange={(e) => setNewPostName(e.target.value)}
-              placeholder="Your Name..."
+              placeholder="Ditt Namn..."
             />
             <input
               type="text"
-              placeholder="Post title..."
+              placeholder="Titel..."
               value={newPostTitle}
               onChange={(e) => setNewPostTitle(e.target.value)}
             />
             <textarea
               type="text"
-              placeholder="Your message..."
+              placeholder="Ditt Meddelande..."
               value={newPostContent}
               onChange={(e) => setNewPostContent(e.target.value)}
             />
