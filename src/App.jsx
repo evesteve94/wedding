@@ -1,5 +1,7 @@
+// App.jsx
+
+import { Route, Routes, Navigate } from "react-router-dom";
 import Layout from "./Layout/Layout";
-import { Route, Routes } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import InfoPage from "./pages/InfoPage";
 import SchedulePage from "./pages/SchedulePage";
@@ -13,14 +15,17 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<HomePage />} />
+          <Route index element={<Navigate to="/home" />} />
           <Route path="/info" element={<InfoPage />} />
           <Route path="/schedule" element={<SchedulePage />} />
           <Route path="/guest-book" element={<GuestBookPage />} />
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/login" element={<Authentication />} />
-          <Route path="*" element={<MissingPage />} />
         </Route>
+        {/* Define a separate route for HomePage outside of the Layout */}
+        <Route path="/home" element={<HomePage />} />
+        {/* Fallback route for 404 errors */}
+        <Route path="*" element={<MissingPage />} />
       </Routes>
     </div>
   );
