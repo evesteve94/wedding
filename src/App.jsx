@@ -16,6 +16,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Navigate to="/home" />} />
+          <Route path="/home" element={<HomePage />} />
           <Route path="/info" element={<InfoPage />} />
           <Route path="/schedule" element={<SchedulePage />} />
           <Route path="/guest-book" element={<GuestBookPage />} />
@@ -23,7 +24,7 @@ function App() {
           <Route path="/login" element={<Authentication />} />
         </Route>
         {/* Define a separate route for HomePage outside of the Layout */}
-        <Route path="/home" element={<HomePage />} />
+
         {/* Fallback route for 404 errors */}
         <Route path="*" element={<MissingPage />} />
       </Routes>
