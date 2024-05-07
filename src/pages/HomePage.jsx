@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import apple from "../assets/img/apple.png";
 import banana from "../assets/img/banana.png";
 import bubbles from "../assets/img/bubbles.png";
-import { FaGlassCheers } from "react-icons/fa";
+import { FaCalendarAlt, FaInfoCircle, FaBook, FaImages } from "react-icons/fa";
 
 const HomePage = () => {
   return (
@@ -16,20 +16,28 @@ const HomePage = () => {
           av både dagen, kvällen och alla andra stunder som vi får spendera i
           framtiden med just Er.
         </p>
-        <h3>På denna sida kan ni:</h3>
+        <img
+          className="homepage-img"
+          src={bubbles}
+          alt="Viktor and Emma drinking champagne"
+        />
+        <h2>På denna sida kan ni:</h2>
         <ul>
           <li>
-            Läsa <Link to="/schedule"> schemat</Link> för helgen
+            <FaCalendarAlt /> Läsa <Link to="/schedule"> schemat</Link> för
+            helgen
           </li>
           <li>
-            Skapa ett konto för att kunna skriva i{" "}
+            <FaBook /> Skapa ett konto för att kunna skriva i{" "}
             <Link to="/guest-book"> Gästboken</Link>
           </li>
           <li>
-            Läsa mer <Link to="/info"> Information</Link> om det fina paret
+            <FaInfoCircle /> Läsa mer <Link to="/info"> Information</Link> om
+            det fina paret
           </li>
           <li>
-            Se bilder i <Link to="/gallery"> Galleriet</Link> från helgen
+            <FaImages /> Se bilder i <Link to="/gallery"> Galleriet</Link> från
+            helgen
           </li>
         </ul>
         <div className="photo-div">

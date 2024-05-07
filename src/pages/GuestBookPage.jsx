@@ -12,6 +12,7 @@ import {
 } from "firebase/firestore";
 import { FaPlusCircle, FaHeart } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import Jelly from "../assets/img/jellyfish.png";
 
 const GuestBookPage = () => {
   const [postList, setPostList] = useState([]);
@@ -83,11 +84,12 @@ const GuestBookPage = () => {
           <ul className="message-list" style={{ listStyle: "none" }}>
             {postList.map((post) => (
               <li className="message" key={post.id}>
-                <h3>{post.title}</h3>
-                <p>{post.content}</p>
+                {" "}
+                <h3>{post.title} </h3> <p>{post.content}</p>
                 <p>
                   {" "}
-                  Puss & Kram, <br /> {post.name}
+                  Puss & Kram, <br /> {post.name}{" "}
+                  <img style={{ height: "1.2rem" }} src={Jelly} alt="" />
                 </p>
               </li>
             ))}

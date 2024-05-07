@@ -80,7 +80,7 @@ const Authentication = () => {
     try {
       await signOut(auth);
       // Update state to show buttons after successful sign-out
-      setShowButtons(true);
+      setShowSignInForm(true);
     } catch (err) {
       console.error(err);
     }
