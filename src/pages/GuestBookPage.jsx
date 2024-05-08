@@ -89,7 +89,8 @@ const GuestBookPage = () => {
                 <p>
                   {" "}
                   Puss & Kram, <br /> {post.name}{" "}
-                  <img style={{ height: "1.2rem" }} src={Jelly} alt="" />
+                  <img style={{ height: "1.2rem" }} src={Jelly} alt="" /> <br />
+                  {post.timeStamp}
                 </p>
               </li>
             ))}

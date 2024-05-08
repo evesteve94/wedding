@@ -181,11 +181,6 @@ main {
   width: 100%;
 }
 
-@media (min-width: 750px) {
-  main {
-    background-image: url(./assets/img/background.png);
-  }
-}
 
 /* HOME HOME HOME */
 
@@ -233,6 +228,7 @@ main {
 .guest-book {
   background-color: var(--background-color);
   border-radius: 1rem;
+  width: 100%;
   max-width: 1000px;
   flex: 1;
   text-align: center;
@@ -381,4 +377,95 @@ footer p {
   font-size: 0.8rem;
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   /* font-family: Arial, Helvetica, sans-serif; */
+}
+
+@media (min-width: 750px) {
+  html {
+    font-size: 1.2rem;
+  }
+  main {
+    background-image: url(./assets/img/background.png);
+    flex-wrap: wrap;
+    background-size: contain;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  header p {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  .welcome-text{
+    width: 100%;
+    height: fit-content;
+    justify-content: start;
+  }
+
+  .first-text,
+  .second-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .second-text{
+    flex-direction: row-reverse;
+  }
+
+  .welcome-text ul li {
+    margin-top: 0.5rem;
+    font-size: 1.3rem;
+  }
+
+  .first-text p {
+    width: 40%;
+  }
+
+  .homepage-img{
+    width: 45%;
+    height: auto;
+  }
+
+  .App {
+    max-width: 1000px;
+  }
+
+  .info-page p,
+  .schedule-page p{
+    width: 70%;
+  }
+
+  .guest-book {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .message{
+    width: 90%;
+    max-width: 600px;
+  }
+
+  .message h3 {
+    font-size: 1.5rem;
+  }
+
+}
+
+@media (min-width: 900px) {
+  main{
+    background-image: url(./assets/img/laptop.jpg);
+    background-size: contain;
+  }
 }
