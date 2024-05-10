@@ -12,6 +12,7 @@ import {
   FaTaxi,
   FaGlassCheers,
   FaGift,
+  FaPizzaSlice,
 } from "react-icons/fa";
 
 const InfoPage = () => {
@@ -33,7 +34,7 @@ const InfoPage = () => {
           <p>
             {" "}
             <FaRing /> <span style={{ fontWeight: "bold" }}>Vigsel</span>:
-            Lördagen 8:e juni klockan ???
+            Lördagen 8:e juni klockan 15:00
           </p>
           <p>
             {" "}
@@ -84,33 +85,39 @@ const InfoPage = () => {
             {" "}
             <FaTaxi />
             <span style={{ fontWeight: "bold" }}>Taxi</span>: Kommer finnas
-            förbokat mellan 00:00-00:00 för att köra mellan gården och hotellen.
-            Nummer:{" "}
+            förbokat under lördagskvällen. Mer information om detta kommer att
+            presenteras under dagen.
+          </p>
+          <p>
+            <FaPizzaSlice /> <span style={{ fontWeight: "bold" }}>Mat</span>:
+            Tilltugg och Middagsbuffe på lördagen utlovas på lördagen, tillagat
+            av bästa farbrorn Kjell! Övrig mat ansvar gästerna för.
           </p>
         </div>
         <h3>Om Oss</h3>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
-          fuga temporibus aliquam veritatis quae error exercitationem velit,
-          ratione enim quaerat quas porro aut eos libero voluptates. Officia
-          recusandae maiores rem!
+          Viktor Björling och Emma Thorén träffades den 22 april 2017. Deras
+          gemensamma vänner träffades på Tallriken i Pildammarna för att njuta
+          av vårsolen och dricka Bloody Marys. När Viktors såg Emma för första
+          gången rann det blandad sås ner för hennes arm medan hon ståendes åt
+          en falafel, det var kärlek vid första ögonkastet.{" "}
         </p>
-        <h3>Om Er</h3>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
-          fuga temporibus aliquam veritatis quae error exercitationem velit,
-          ratione enim quaerat quas porro aut eos libero voluptates. Officia
-          recusandae maiores rem!
+          {" "}
+          Efter flera år av kärlek först på distans, med helgens sång och dans,
+          från särbos till sambos i Malmö, med minnen i sol och snö, var de
+          tillbaka där på Tallriken fem år senare, den 22 april 2022. Solen
+          sken, Bloody Marys dracks och en fråga ställdes med ett ja till svars.
+          Den 8 juni 2024 är det äntligen dags att fira detta fina par med er,
+          underbara gäster! Dans, musik, god mat och utmärkt sällskap utlovas.
+          Varmt välkomna till vårt bröllop!
         </p>
-        <h3>Med Stor Kärlek och Respekt</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
-          fuga temporibus aliquam veritatis quae error exercitationem velit,
-          ratione enim quaerat quas porro aut eos libero voluptates. Officia
-          recusandae maiores rem!
-        </p>
+        <h3>
+          Med Stor Kärlek och Respekt, <br />
+          Viktor & Emma
+        </h3>
 
-        <h3>LET'S GOOOO</h3>
+        <h3>LET'S A-GOOOO</h3>
       </div>
     </main>
   );
