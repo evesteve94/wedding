@@ -27,12 +27,13 @@ const InfoPage = () => {
           <p>
             {" "}
             <FaCalendarAlt />
-            <span style={{ fontWeight: "bold" }}>Datum</span> : 7-9 juni
+            <span style={{ fontWeight: "bold" }}>Datum</span> : Fredagen 7:e
+            juni till Söndagen 9:e juni
           </p>
           <p>
             {" "}
-            <FaRing /> <span style={{ fontWeight: "bold" }}>Vigsel</span>: 8
-            juni klockan ???
+            <FaRing /> <span style={{ fontWeight: "bold" }}>Vigsel</span>:
+            Lördagen 8:e juni klockan ???
           </p>
           <p>
             {" "}
