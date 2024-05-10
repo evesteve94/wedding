@@ -91,7 +91,7 @@ const InfoPage = () => {
           <p>
             <FaPizzaSlice /> <span style={{ fontWeight: "bold" }}>Mat</span>:
             Tilltugg och Middagsbuffe på lördagen utlovas på lördagen, tillagat
-            av bästa farbrorn Kjell! Övrig mat ansvar gästerna för.
+            av bästa farbrorn Kjell! Övrig mat ansvarar gästerna för.
           </p>
         </div>
         <h3>Om Oss</h3>
