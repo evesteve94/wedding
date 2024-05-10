@@ -194,7 +194,7 @@ main {
   gap: 1rem;
   width: 100%;
   max-width: 1000px;
-  border-radius: 1rem;
+  /* border-radius: 1rem; */
   font-size: 1rem;
   height: 100%;
   padding: 1rem;
@@ -227,7 +227,7 @@ main {
 /* GUEST BOOK GUEST BOOK GUEST BOOK */
 .guest-book {
   background-color: var(--background-color);
-  border-radius: 1rem;
+  /* border-radius: 1rem; */
   width: 100%;
   max-width: 1000px;
   flex: 1;
@@ -307,6 +307,13 @@ textarea:focus{
 
 .add-post {
   font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.add-post:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  transition-duration: 0.8s;
 }
 
 /* SCHEDULE */
@@ -316,7 +323,7 @@ textarea:focus{
 .login-page,
 .gallery-page {
   max-width: 1000px;
-  border-radius: 1rem;
+  /* border-radius: 1rem; */
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -326,6 +333,22 @@ textarea:focus{
   background-color: var(--background-color);
   flex: 1;
   width: 100%;
+}
+
+.short-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.short-info p {
+  /* font-weight: bold; */
+  /* margin: 0.75rem; */
+  text-align: left;
+  font-size: 1.2rem;
 }
 
 .login-msg {
@@ -351,6 +374,10 @@ textarea:focus{
   justify-content: center;
   align-items: center;
   gap: 1rem;
+}
+
+.login-page button:hover{
+  cursor: pointer;
 }
 
 /* FOOTER FOOTER FOOTER */
@@ -466,6 +493,6 @@ footer p {
 @media (min-width: 900px) {
   main{
     background-image: url(./assets/img/laptop.jpg);
-    background-size: contain;
+    background-size: cover;
   }
 }

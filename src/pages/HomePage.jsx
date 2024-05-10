@@ -15,7 +15,16 @@ const HomePage = () => {
             Vad fantastiskt roligt det ska bli att fira våran stora dag
             tillsammans med Er! Vi ser otroligt mycket fram emot att dela med
             oss av både dagen, kvällen och alla andra stunder som vi får
-            spendera i framtiden med just Er.
+            spendera i framtiden med just Er. <br /> <br />
+            Men hur ska vi alla få plats att fira detta ihop? På Sjöröds
+            Lägerområde så klart! Strax utanför Gärsnäs på Österlen finner ni
+            Gyllebosjö där denna fantastiska tillställning kommer äga rum.
+            Rustad med sovplatser, tältpotential och festpotential kommer vi
+            alla trivas i välbehag. Då många av våra vänner reser från olika
+            städer och länder har vi hyrt området från fredagen till söndagen
+            (7-9:e juni). Det är fritt fram att anlända redan på fredagen och
+            samskapa så att vi alla får en minnesvärd och fantastisk stund
+            tillsammans.
           </p>
           <img
             className="homepage-img"

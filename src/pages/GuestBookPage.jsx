@@ -19,6 +19,10 @@ const GuestBookPage = () => {
   const [newPostTitle, setNewPostTitle] = useState("");
   const [newPostName, setNewPostName] = useState("");
   const [newPostContent, setNewPostContent] = useState("");
+  const [nameError, setNameError] = useState(false);
+  const [titleError, setTitleError] = useState(false);
+  const [contentError, setContentError] = useState(false);
+  const [loading, setLoading] = useState(true); // State for loading indicator
 
   const postsCollection = collection(db, "posts");
 
@@ -33,6 +37,7 @@ const GuestBookPage = () => {
       setNewPostTitle("");
       setNewPostContent("");
       setNewPostName("");
+      setLoading(false); // Set loading to false after data is fetched
     } catch (err) {
       console.error(err);
     }
@@ -43,17 +48,35 @@ const GuestBookPage = () => {
   }, []);
 
   const handleAddPost = async () => {
-    try {
-      await addDoc(postsCollection, {
-        title: newPostTitle,
-        id: nanoid(),
-        content: newPostContent,
-        name: newPostName,
-        timeStamp: getTimeStamp(),
-      });
-      getPostsList();
-    } catch (err) {
-      console.error(err);
+    if (!newPostName) {
+      setNameError(true);
+    } else {
+      setNameError(false);
+    }
+    if (!newPostTitle) {
+      setTitleError(true);
+    } else {
+      setTitleError(false);
+    }
+    if (!newPostContent) {
+      setContentError(true);
+    } else {
+      setContentError(false);
+    }
+
+    if (newPostName && newPostTitle && newPostContent) {
+      try {
+        await addDoc(postsCollection, {
+          title: newPostTitle,
+          id: nanoid(),
+          content: newPostContent,
+          name: newPostName,
+          timeStamp: getTimeStamp(),
+        });
+        getPostsList();
+      } catch (err) {
+        console.error(err);
+      }
     }
   };
 
@@ -80,21 +103,7 @@ const GuestBookPage = () => {
           <h2 style={{ marginBottom: "1rem" }}>
             {" "}
             <FaHeart /> Gästbok <FaHeart />
-          </h2>
-          <ul className="message-list" style={{ listStyle: "none" }}>
-            {postList.map((post) => (
-              <li className="message" key={post.id}>
-                {" "}
-                <h3>{post.title} </h3> <p>{post.content}</p>
-                <p>
-                  {" "}
-                  Puss & Kram, <br /> {post.name}{" "}
-                  <img style={{ height: "1.2rem" }} src={Jelly} alt="" /> <br />
-                  {post.timeStamp}
-                </p>
-              </li>
-            ))}
-          </ul>
+          </h2>{" "}
           <div className="post-form">
             <h3>Skriv ett meddelande</h3>
             <input
@@ -103,23 +112,47 @@ const GuestBookPage = () => {
               onChange={(e) => setNewPostName(e.target.value)}
               placeholder="Ditt Namn..."
             />
+            {nameError && <p className="error">Namn saknas</p>}
             <input
               type="text"
               placeholder="Titel..."
               value={newPostTitle}
               onChange={(e) => setNewPostTitle(e.target.value)}
             />
+            {titleError && <p className="error">Titel saknas</p>}
             <textarea
               type="text"
               placeholder="Ditt Meddelande..."
               value={newPostContent}
               onChange={(e) => setNewPostContent(e.target.value)}
             />
+            {contentError && <p className="error">Meddelande saknas</p>}
             <button className="add-post" onClick={handleAddPost}>
               {" "}
-              <FaPlusCircle />
+              Publicera <FaPlusCircle />
             </button>
           </div>
+          {loading ? (
+            <p>Loading...</p> // Show loading indicator while data is being fetched
+          ) : (
+            <ul className="message-list" style={{ listStyle: "none" }}>
+              {postList
+                .sort((a, b) => new Date(b.timeStamp) - new Date(a.timeStamp)) // Sort posts based on timeStamp
+                .map((post) => (
+                  <li className="message" key={post.id}>
+                    {" "}
+                    <h3>{post.title} </h3> <p>{post.content}</p>
+                    <p>
+                      {" "}
+                      Puss & Kram, <br /> {post.name}{" "}
+                      <img style={{ height: "1.2rem" }} src={Jelly} alt="" />{" "}
+                      <br />
+                      {post.timeStamp}
+                    </p>
+                  </li>
+                ))}
+            </ul>
+          )}
         </div>
       </main>
     );
