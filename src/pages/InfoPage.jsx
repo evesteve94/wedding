@@ -54,7 +54,8 @@ const InfoPage = () => {
           <p>
             {" "}
             <FaHome /> <span style={{ fontWeight: "bold" }}>Boende</span>: 66
-            sovplatser på gården + tältplatser
+            sovplatser på gården + tältplatser. Ta med egna sängkläder!
+            Madrasser, kuddar och täcken finns!
           </p>
           <p>
             <FaHotel /> <span style={{ fontWeight: "bold" }}>Hotell</span>:{" "}
@@ -90,8 +91,8 @@ const InfoPage = () => {
           </p>
           <p>
             <FaPizzaSlice /> <span style={{ fontWeight: "bold" }}>Mat</span>:
-            Tilltugg och Middagsbuffe på lördagen utlovas på lördagen, tillagat
-            av bästa farbrorn Kjell! Övrig mat ansvarar gästerna för.
+            Tilltugg och Middagsbuffe på lördagen utlovas, tillagat av bästa
+            farbrorn Kjell! Övrig mat ansvarar gästerna för.
           </p>
         </div>
         <h3>Om Oss</h3>
