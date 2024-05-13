@@ -92,7 +92,8 @@ const InfoPage = () => {
           <p>
             <FaPizzaSlice /> <span style={{ fontWeight: "bold" }}>Mat</span>:
             Tilltugg och Middagsbuffe på lördagen utlovas, tillagat av bästa
-            farbrorn Kjell! Övrig mat ansvarar gästerna för.
+            farbrorn Kjell! Övrig mat ansvarar gästerna för, bortsett från
+            gemensam frukost på söndagen samt kaffe och te alla dagar.
           </p>
         </div>
         <h3>Om Oss</h3>
