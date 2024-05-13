@@ -25,40 +25,52 @@ const InfoPage = () => {
         </h2>
         <h3>Praktisk Information</h3>
         <div className="short-info">
-          <p>
+          <h4>
             {" "}
             <FaCalendarAlt />
-            <span style={{ fontWeight: "bold" }}>Datum</span> : Fredagen 7:e
-            juni till Söndagen 9:e juni
-          </p>
-          <p>
+            Datum
+          </h4>
+          <p> Fredagen 7:e juni till Söndagen 9:e juni</p>
+          <h4>
             {" "}
-            <FaRing /> <span style={{ fontWeight: "bold" }}>Vigsel</span>:
-            Lördagen 8:e juni klockan 15:00
-          </p>
-          <p>
+            <FaRing />
+            Vigsel
+          </h4>
+          <p>Lördagen 8:e juni klockan 15:00</p>
+          <h4>
             {" "}
-            <FaMapMarkerAlt />{" "}
-            <span style={{ fontWeight: "bold" }}>Adress</span>: Sjöröds
-            Lägerområde, Gyllebo 116, Gärsnäs
-          </p>
-          <p>
+            <FaMapMarkerAlt />
+            Adress
+          </h4>
+          <p>Sjöröds Lägerområde, Gyllebo 116, Gärsnäs</p>
+          <h4>
             {" "}
-            <FaUserTie /> <span style={{ fontWeight: "bold" }}>Klädkod</span>:
-            Finkläder, badkläder, sköna (oömtåliga) skor
-          </p>
-          <p>
-            <FaGift /> <span style={{ fontWeight: "bold" }}>Gåvor</span>: Inga
-            fysiska gåvor, men gärna bidrag till vår Japanresa
-          </p>
-          <p>
+            <FaUserTie />
+            Klädkod
+          </h4>
+          <p>Finkläder, badkläder, sköna (oömtåliga) skor</p>
+          <h4>
             {" "}
-            <FaHome /> <span style={{ fontWeight: "bold" }}>Boende</span>: 66
-            sovplatser på gården + tältplatser. Ta med egna sängkläder!
+            <FaGift />
+            Gåvor
+          </h4>
+          <p>Inga fysiska gåvor, men gärna bidrag till vår Japanresa</p>
+          <h4>
+            {" "}
+            <FaHome />
+            Boende
+          </h4>
+          <p>
+            66 sovplatser på gården + tältplatser. Ta med egna sängkläder!
             Madrasser, kuddar och täcken finns!
           </p>
+          <h4>
+            {" "}
+            <FaHotel />
+            Hotell
+          </h4>
           <p>
-            <FaHotel /> <span style={{ fontWeight: "bold" }}>Hotell</span>:{" "}
+            {" "}
             <a target="blank" href="https://villahasselbacken.se/">
               Villa Hasselbacken
             </a>{" "}
@@ -67,31 +79,46 @@ const InfoPage = () => {
               Stockeboda Gård
             </a>
           </p>
+          <h4>
+            {" "}
+            <FaGlassCheers />
+            Toast Masters
+          </h4>
           <p>
-            <FaGlassCheers />{" "}
-            <span style={{ fontWeight: "bold" }}>Toast Masters</span>: Filippa &
-            Hampus{" "}
+            Maila Filippa & Hampus om ni vill hålla ett tal. Inga spontana tal
+            tack!{" "}
             <a href="mailto:filippa.hampus.tm@gmail.com">
               <FaEnvelope />
             </a>
           </p>
+          <h4>
+            {" "}
+            <FaTrain />
+            Transport
+          </h4>
           <p>
             {" "}
-            <FaTrain /> <span style={{ fontWeight: "bold" }}>Transport</span>:
             Transport på lördag kväll till tåget i Gärsnäs kommer finnas. Sista
             tåget går 22:20 och transport dit avgår 21:50, meddela om Ni behöver
             plats.
           </p>
-          <p>
+          <h4>
             {" "}
             <FaTaxi />
-            <span style={{ fontWeight: "bold" }}>Taxi</span>: Kommer finnas
-            förbokat under lördagskvällen. Mer information om detta kommer att
-            presenteras under dagen.
-          </p>
+            Taxi
+          </h4>
           <p>
-            <FaPizzaSlice /> <span style={{ fontWeight: "bold" }}>Mat</span>:
-            Tilltugg och Middagsbuffe på lördagen utlovas, tillagat av bästa
+            {" "}
+            Kommer finnas förbokat under lördagskvällen. Mer information om
+            detta kommer att presenteras under dagen.
+          </p>
+          <h4>
+            {" "}
+            <FaPizzaSlice />
+            Mat
+          </h4>
+          <p>
+            Tilltugg och Middagsbuffé på lördagen utlovas, tillagat av bästa
             farbrorn Kjell! Övrig mat ansvarar gästerna för, bortsett från
             gemensam frukost på söndagen samt kaffe och te alla dagar.
           </p>

@@ -347,8 +347,19 @@ textarea:focus{
 .short-info p {
   /* font-weight: bold; */
   /* margin: 0.75rem; */
-  text-align: left;
+  text-align: center;
   font-size: 1.2rem;
+}
+
+.short-info h4 {
+  font-family: 'BoecklinsUniverse', sans-serif;
+  font-weight: 100;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+.saturday {
+  font-size: 1.5rem;
 }
 
 .login-msg {
@@ -471,6 +482,7 @@ footer p {
   .info-page p,
   .schedule-page p{
     width: 70%;
+
   }
 
   .guest-book {
