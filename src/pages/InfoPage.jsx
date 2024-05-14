@@ -178,12 +178,14 @@ const InfoPage = () => {
           </h4>
           <p>
             {" "}
-            Taxi kommer finnas förbokat under lördagskvällen genom Österlens
+            Taxi kommer finnas tillgängligt under lördagskvällen genom Österlens
             Taxi. De är informerade om bröllopet och kan nås på detta nummer för
             bokning: <br />
             <span style={{ fontWeight: "bold" }}>041 41 77 77</span> <br />
             Kort sagt, kommer taxibilar vara "on call" för att köra gäster till
             närliggande hotell, tågstationer eller andra platser runt Österlen.
+            Men det är viktigt att ni själva bokar via telefon under kvällens
+            gång!
           </p>
           <h3>
             {" "}
