@@ -179,8 +179,10 @@ const InfoPage = () => {
           <p>
             {" "}
             Taxi kommer finnas förbokat under lördagskvällen genom Österlens
-            Taxi. Mer information om detta kommer att presenteras under dagen.
-            Kort sagt, kommer taxibilar vara on call för att köra gäster till
+            Taxi. De är informerade om bröllopet och kan nås på detta nummer för
+            bokning: <br />
+            <span style={{ fontWeight: "bold" }}>041 41 77 77</span> <br />
+            Kort sagt, kommer taxibilar vara "on call" för att köra gäster till
             närliggande hotell, tågstationer eller andra platser runt Österlen.
           </p>
           <h3>
