@@ -144,7 +144,7 @@ const GuestBookPage = () => {
             <p style={{ width: "70%" }}>
               Här kan ni publicera meddelanden under och efter bröllopet! Klicka
               på redigera-knappen <FaPen /> för att göra ändringar på era
-              inlägg. Ni kan då äver radera inlägget med <FaTrash /> knappen.
+              inlägg. Ni kan då även radera inlägget med <FaTrash /> knappen.
             </p>
             <h3>Skriv ett meddelande</h3>
             <input
