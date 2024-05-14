@@ -281,7 +281,7 @@ const InfoPage = () => {
         <p>
           Viktor Björling och Emma Thorén träffades den 22 april 2017. Deras
           gemensamma vänner träffades på Tallriken i Pildammarna för att njuta
-          av vårsolen och dricka Bloody Marys. När Viktors såg Emma för första
+          av vårsolen och dricka Bloody Marys. När Viktor såg Emma för första
           gången rann det blandad sås ner för hennes arm medan hon ståendes åt
           en falafel, det var kärlek vid första ögonkastet.{" "}
         </p>
