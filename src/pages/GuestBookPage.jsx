@@ -10,7 +10,14 @@ import {
   deleteDoc,
   updateDoc,
 } from "firebase/firestore";
-import { FaPlusCircle, FaHeart } from "react-icons/fa";
+import {
+  FaPlusCircle,
+  FaHeart,
+  FaPen,
+  FaTrash,
+  FaSave,
+  FaTimes,
+} from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Jelly from "../assets/img/jellyfish.png";
 
@@ -22,7 +29,11 @@ const GuestBookPage = () => {
   const [nameError, setNameError] = useState(false);
   const [titleError, setTitleError] = useState(false);
   const [contentError, setContentError] = useState(false);
-  const [loading, setLoading] = useState(true); // State for loading indicator
+  const [loading, setLoading] = useState(true);
+  const [editMode, setEditMode] = useState(false);
+  const [editedPostId, setEditedPostId] = useState("");
+  const [editedPostTitle, setEditedPostTitle] = useState("");
+  const [editedPostContent, setEditedPostContent] = useState("");
 
   const postsCollection = collection(db, "posts");
 
@@ -34,10 +45,7 @@ const GuestBookPage = () => {
         id: doc.id,
       }));
       setPostList(data);
-      setNewPostTitle("");
-      setNewPostContent("");
-      setNewPostName("");
-      setLoading(false); // Set loading to false after data is fetched
+      setLoading(false);
     } catch (err) {
       console.error(err);
     }
@@ -50,33 +58,61 @@ const GuestBookPage = () => {
   const handleAddPost = async () => {
     if (!newPostName) {
       setNameError(true);
-    } else {
-      setNameError(false);
+      return;
     }
     if (!newPostTitle) {
       setTitleError(true);
-    } else {
-      setTitleError(false);
+      return;
     }
     if (!newPostContent) {
       setContentError(true);
-    } else {
-      setContentError(false);
+      return;
     }
 
-    if (newPostName && newPostTitle && newPostContent) {
-      try {
-        await addDoc(postsCollection, {
-          title: newPostTitle,
-          id: nanoid(),
-          content: newPostContent,
-          name: newPostName,
-          timeStamp: getTimeStamp(),
-        });
-        getPostsList();
-      } catch (err) {
-        console.error(err);
-      }
+    try {
+      await addDoc(postsCollection, {
+        title: newPostTitle,
+        id: nanoid(),
+        content: newPostContent,
+        name: newPostName,
+        email: auth.currentUser.email,
+        timeStamp: getTimeStamp(),
+      });
+      getPostsList();
+      setNewPostTitle("");
+      setNewPostContent("");
+      setNewPostName("");
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  const handleEditPost = async (postId) => {
+    try {
+      await updateDoc(doc(db, "posts", postId), {
+        title: editedPostTitle,
+        content: editedPostContent,
+      });
+      setEditMode(false);
+      getPostsList();
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  const handleCancelEdit = () => {
+    setEditMode(false);
+    setEditedPostId("");
+    setEditedPostTitle("");
+    setEditedPostContent("");
+  };
+
+  const handleDeletePost = async (postId) => {
+    try {
+      await deleteDoc(doc(db, "posts", postId));
+      getPostsList(); // Fetch updated post list after deletion
+    } catch (err) {
+      console.error(err);
     }
   };
 
@@ -105,6 +141,11 @@ const GuestBookPage = () => {
             <FaHeart /> Gästbok <FaHeart />
           </h2>{" "}
           <div className="post-form">
+            <p style={{ width: "70%" }}>
+              Här kan ni publicera meddelanden under och efter bröllopet! Klicka
+              på redigera-knappen <FaPen /> för att göra ändringar på era
+              inlägg. Ni kan då äver radera inlägget med <FaTrash /> knappen.
+            </p>
             <h3>Skriv ett meddelande</h3>
             <input
               type="text"
@@ -133,24 +174,66 @@ const GuestBookPage = () => {
             </button>
           </div>
           {loading ? (
-            <p>Loading...</p> // Show loading indicator while data is being fetched
+            <p>Loading...</p>
           ) : (
             <ul className="message-list" style={{ listStyle: "none" }}>
-              {postList
-                .sort((a, b) => new Date(b.timeStamp) - new Date(a.timeStamp)) // Sort posts based on timeStamp
-                .map((post) => (
-                  <li className="message" key={post.id}>
-                    {" "}
-                    <h3>{post.title} </h3> <p>{post.content}</p>
-                    <p>
-                      {" "}
-                      Puss & Kram, <br /> {post.name}{" "}
-                      <img style={{ height: "1.2rem" }} src={Jelly} alt="" />{" "}
-                      <br />
-                      {post.timeStamp}
-                    </p>
-                  </li>
-                ))}
+              {postList.map((post) => (
+                <li className="message" key={post.id}>
+                  {editMode && editedPostId === post.id ? (
+                    <>
+                      <input
+                        type="text"
+                        value={editedPostTitle}
+                        onChange={(e) => setEditedPostTitle(e.target.value)}
+                      />
+                      <textarea
+                        value={editedPostContent}
+                        onChange={(e) => setEditedPostContent(e.target.value)}
+                      />
+                      <button
+                        className="edit-btn"
+                        onClick={() => handleEditPost(post.id)}
+                      >
+                        Spara <FaSave />
+                      </button>
+                      <button className="edit-btn" onClick={handleCancelEdit}>
+                        Avbryt <FaTimes />{" "}
+                      </button>
+                      <button
+                        className="edit-btn"
+                        onClick={() => handleDeletePost(post.id)}
+                      >
+                        Radera <FaTrash />
+                      </button>
+                    </>
+                  ) : (
+                    <>
+                      <h3>
+                        {post.title}{" "}
+                        {post.email === auth.currentUser.email && (
+                          <button
+                            onClick={() => {
+                              setEditMode(true);
+                              setEditedPostId(post.id);
+                              setEditedPostTitle(post.title);
+                              setEditedPostContent(post.content);
+                            }}
+                          >
+                            <FaPen />
+                          </button>
+                        )}
+                      </h3>
+                      <p>{post.content}</p>
+                      <p>
+                        Puss & Kram, <br /> {post.name}{" "}
+                        <img style={{ height: "1.2rem" }} src={Jelly} alt="" />{" "}
+                        <br />
+                        {post.timeStamp}
+                      </p>
+                    </>
+                  )}
+                </li>
+              ))}
             </ul>
           )}
         </div>

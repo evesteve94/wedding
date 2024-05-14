@@ -234,6 +234,16 @@ main {
   text-align: center;
 }
 
+.edit-btn {
+  border: 1px solid var(--text-color);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.edit-btn:hover {
+  cursor: pointer;
+}
+
 
 
 .message-list {
@@ -242,6 +252,8 @@ main {
   justify-content: center;
   gap: 1rem;
 }
+
+
 
 .message {
   display: flex;
