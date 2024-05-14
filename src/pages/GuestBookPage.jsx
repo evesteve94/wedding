@@ -212,6 +212,7 @@ const GuestBookPage = () => {
                         {post.title}{" "}
                         {post.email === auth.currentUser.email && (
                           <button
+                            style={{ cursor: "pointer" }}
                             onClick={() => {
                               setEditMode(true);
                               setEditedPostId(post.id);
