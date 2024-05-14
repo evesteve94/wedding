@@ -42,7 +42,8 @@ const SchedulePage = () => {
         <p>
           {" "}
           Innan vigseln är det fritt fram att bada i sjön, promenera i skogen
-          och bara umgås med alla fantaska människor som kommer finnas på plats.{" "}
+          och bara umgås med alla fantastiska människor som kommer finnas på
+          plats.{" "}
         </p>
 
         <FaCalendarAlt style={{ fontSize: "1.5rem" }} />

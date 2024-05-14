@@ -9,7 +9,7 @@ const GalleryPage = () => {
           <FaImage /> Galleri <FaImage />
         </h2>
         <p>Bilder kommer laddas upp efter bröllopet!</p>
-        <p>Logga in på ditt konto för att ta del av galleriet</p>
+        <p>Då kan du logga in på ditt konto för att ta del av galleriet</p>
 
         <h3>
           <FaInfoCircle /> Skicka gärna era bilder!

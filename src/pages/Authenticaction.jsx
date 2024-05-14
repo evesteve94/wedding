@@ -123,6 +123,7 @@ const Authentication = () => {
         {showCreateAccountForm && (
           <div className="form">
             <h3>Create Account</h3>
+            <p>Verifiering sker via mail - kolla gärna i skräpposten</p>
             <input
               type="email"
               placeholder="Email..."

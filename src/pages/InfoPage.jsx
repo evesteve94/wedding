@@ -13,6 +13,11 @@ import {
   FaGlassCheers,
   FaGift,
   FaPizzaSlice,
+  FaParking,
+  FaHeart,
+  FaCar,
+  FaTree,
+  FaUtensils,
 } from "react-icons/fa";
 
 const InfoPage = () => {
@@ -21,16 +26,24 @@ const InfoPage = () => {
       <div className="info-page">
         <h2>
           {" "}
-          <FaInfoCircle /> Information <FaInfoCircle />{" "}
+          <FaInfoCircle /> Praktisk Information <FaInfoCircle />{" "}
         </h2>
-        <h3>Praktisk Information</h3>
+
         <div className="short-info">
-          <h4>
+          <p>
+            Undertill hittar ni all möjlig information om bröllopet, att hitta
+            hit, mat och dryck, samt lägerområdet.{" "}
+          </p>
+          <p>
+            Frågor på det? Maila till viktorochemma.2024@gmail.com{" "}
+            <a href="mailto:viktorochemma.2024@gmail.com">
+              <FaEnvelope />
+            </a>
+          </p>
+          <h3>
             {" "}
-            <FaCalendarAlt />
-            Datum
-          </h4>
-          <p> Fredagen 7:e juni till Söndagen 9:e juni</p>
+            <FaHeart /> Bröllopet <FaHeart />
+          </h3>
           <h4>
             {" "}
             <FaRing />
@@ -39,45 +52,28 @@ const InfoPage = () => {
           <p>Lördagen 8:e juni klockan 15:00</p>
           <h4>
             {" "}
-            <FaMapMarkerAlt />
-            Adress
-          </h4>
-          <p>Sjöröds Lägerområde, Gyllebo 116, Gärsnäs</p>
-          <h4>
-            {" "}
             <FaUserTie />
             Klädkod
           </h4>
-          <p>Finkläder, badkläder, sköna (oömtåliga) skor</p>
+          <p>
+            Finkläder, badkläder, sköna (oömtåliga) skor. <br />
+            Med detta menas: Ni får ha på er precis vad som helst som ni känner
+            er fina och bekväma i! Vi rekommenderar bra skor eftersom det blir
+            både dans och ibland träsk-liknande underlag, det är på landet trots
+            allt. Handduk och badkläder är ett måste om ni vill bada i sjön
+            eller använda bastun!
+          </p>
           <h4>
             {" "}
             <FaGift />
             Gåvor
           </h4>
-          <p>Inga fysiska gåvor, men gärna bidrag till vår Japanresa</p>
-          <h4>
-            {" "}
-            <FaHome />
-            Boende
-          </h4>
           <p>
-            66 sovplatser på gården + tältplatser. Ta med egna sängkläder!
-            Madrasser, kuddar och täcken finns!
-          </p>
-          <h4>
-            {" "}
-            <FaHotel />
-            Hotell
-          </h4>
-          <p>
-            {" "}
-            <a target="blank" href="https://villahasselbacken.se/">
-              Villa Hasselbacken
-            </a>{" "}
-            eller{" "}
-            <a target="blank" href="https://www.stockeboda.se/">
-              Stockeboda Gård
-            </a>
+            Inga fysiska gåvor önskas, men gärna bidrag till vår Japanresa.{" "}
+            <br />
+            Ni kan swisha Viktor ett bidrag <br />
+            <span style={{ fontWeight: "bold" }}>076 272 06 53</span>{" "}
+            <FaHeart />
           </p>
           <h4>
             {" "}
@@ -91,16 +87,89 @@ const InfoPage = () => {
               <FaEnvelope />
             </a>
           </p>
+
+          <h3>
+            {" "}
+            <FaCar /> Ta Sig Dit & Hem <FaCar />
+          </h3>
+          <h4>
+            {" "}
+            <FaMapMarkerAlt />
+            Adress
+          </h4>
+          <p>
+            Sjöröds Lägerområde, Gyllebo 116, Gärsnäs. <br />
+            Google Maps karta hittar ni{" "}
+            <a href="https://maps.app.goo.gl/mDobNt7SQEambFDq6" target="blank">
+              HÄR
+            </a>{" "}
+            <br /> <br />
+            En hjälpguide till att hitta hit:{" "}
+            <a href="https://www.sjorod.se/hitta-hit/" target="blank">
+              KLICKA HÄR
+            </a>
+            <br /> <br />
+            Mer information om Sjöröds lägerplats hittar ni{" "}
+            <a href="https://www.sjorod.se/lageromradet/" target="blank">
+              HÄR
+            </a>
+          </p>
+          <h4>
+            {" "}
+            <FaParking /> Bil & Parkering{" "}
+          </h4>
+          <p>
+            För er som kör till bröllopet kan ni utgå från denna{" "}
+            <a href="https://maps.app.goo.gl/mDobNt7SQEambFDq6" target="blank">
+              karta
+              <FaMapMarkerAlt />{" "}
+            </a>
+          </p>
+          <p>
+            <span style={{ fontWeight: "bold" }}>Från Malmö: </span> Kör väg 11
+            mot Simrishamn. Strax före Gärsnäs tar ni av till vänster mot Östra
+            Vemmerlöv. Passera genom Östra Vemmerlöv. Innan skogsbrynet på
+            vänster sida hittar ni den skyltade infarten till Sjöröds
+            lägerområde.
+          </p>
+
+          <p>
+            <span style={{ fontWeight: "bold" }}>Från Lund: </span> Kör till
+            Dalby och anslut där till väg 11, följ sedan vägbeskrivningen ovan.
+          </p>
+
+          <p>
+            Ni är välkomna att köra ända fram till gårdshuset för att lasta av
+            er packning. En större parkering finns bakom en öppen bom intill
+            gården. Det kommer vara skyltat!
+          </p>
+
           <h4>
             {" "}
             <FaTrain />
-            Transport
+            Kollektivtraffik
           </h4>
           <p>
-            {" "}
-            Transport på lördag kväll till tåget i Gärsnäs kommer finnas. Sista
-            tåget går 22:20 och transport dit avgår 21:50, meddela om Ni behöver
-            plats.
+            Eftersom lägerområdet ligger mitt ute i skogen, är det en bit att gå
+            från närmsta busshållplats. Närmaste järnvägsstation ligger i
+            Gärsnäs, 7 kilometer bort. Närmaste busshållplats heter
+            <span style={{ fontWeight: "bold" }}> Gyllebosjövägen</span> och
+            ligger 2 kilometer från lägerområdet. Bussen som går dit heter{" "}
+            <span style={{ fontWeight: "bold" }}>574</span> och avgår från
+            Simrishamns station. Man kan åka Pågatåg från Malmö och Ystad, samt
+            expressbuss från Lund och Kristianstad. Oavsett om du åker tåg eller
+            buss till Simrishamn, ingår alltid resan med buss{" "}
+            <span style={{ fontWeight: "bold" }}>574</span> i priset. <br />{" "}
+            <br />
+            Skjuts från bröllopet till järnvägsstationen på lördag kväll kommer
+            erbjudas! Sista tåget går{" "}
+            <span style={{ fontWeight: "bold" }}>22:20</span> från Gärsnäs
+            järnvägsstation och transport dit avgår{" "}
+            <span style={{ fontWeight: "bold" }}>21:50</span>, meddela om Ni
+            behöver transport! Maila till viktorochemma.2024@gmail.com{" "}
+            <a href="mailto:viktorochemma.2024@gmail.com">
+              <FaEnvelope />
+            </a>
           </p>
           <h4>
             {" "}
@@ -109,18 +178,98 @@ const InfoPage = () => {
           </h4>
           <p>
             {" "}
-            Kommer finnas förbokat under lördagskvällen. Mer information om
-            detta kommer att presenteras under dagen.
+            Taxi kommer finnas förbokat under lördagskvällen genom Österlens
+            Taxi. Mer information om detta kommer att presenteras under dagen.
+            Kort sagt, kommer taxibilar vara on call för att köra gäster till
+            närliggande hotell, tågstationer eller andra platser runt Österlen.
           </p>
+          <h3>
+            {" "}
+            <FaHome /> Boende <FaHome />
+          </h3>
+          <h4>
+            {" "}
+            <FaTree />
+            Gården
+          </h4>
+          <p>
+            Det finns 66 sovplatser på gården + tältplatser. <br />
+            <span style={{ fontWeight: "bold" }}>
+              OBS! Ta med egna sängkläder!
+            </span>{" "}
+            Madrasser, kuddar och täcken finns!
+          </p>
+          <p>
+            Huvudbyggnaden rymmer tre toaletter, varav en är handikappanpassad.
+            Huset är försett med wifi. Intill huvudbyggnaden finns det gamla
+            boningshuset, lilla huset, som idag inrymmer 4 sovrum med 4-8
+            bäddar. Totalt kan 18 personer sova i huset. Övriga sovutrymmen I
+            skogsbrynet finns det 2 patrullstugor med totalt 24 bäddar. I ett
+            annat hus finns ytterligare 2 rum med 8 sovplatser i varje. Området
+            erbjuder även en vedeldad bastu, vedeldad badtunna och vindskydd.
+          </p>
+          <h4>
+            {" "}
+            <FaHotel />
+            Hotell
+          </h4>
+          <p>
+            {" "}
+            Det finns också möjlighet att boka{" "}
+            <a target="blank" href="https://villahasselbacken.se/">
+              Villa Hasselbacken
+            </a>{" "}
+            eller{" "}
+            <a target="blank" href="https://www.stockeboda.se/">
+              Stockeboda Gård
+            </a>{" "}
+            om man vill garantera en god natts sömn.
+          </p>
+          <h3>
+            {" "}
+            <FaUtensils /> Mat & Dryck <FaUtensils />
+          </h3>
+
           <h4>
             {" "}
             <FaPizzaSlice />
             Mat
           </h4>
           <p>
+            <span style={{ fontWeight: "bold" }}>Ingår för alla gäster: </span>
             Tilltugg och Middagsbuffé på lördagen utlovas, tillagat av bästa
-            farbrorn Kjell! Övrig mat ansvarar gästerna för, bortsett från
-            gemensam frukost på söndagen samt kaffe och te alla dagar.
+            farbrorn Kjell! Samt en gemensam frukost inkl. kaffe och te för alla
+            trötta och slitna gäster på söndagen.
+          </p>
+
+          <p>
+            <span style={{ fontWeight: "bold" }}>Ingår inte:</span> Alla övriga
+            måltider. Övrig mat ansvarar gästerna för. Det finns stora
+            grillplatser på lägerområdet samt mycket kol! Frukost och Lunch är
+            alltså BYO (Bring Your Own). Det finns en del mysiga kaffer och
+            matplatser i området som går att läsa om{" "}
+            <a
+              href="https://www.tripadvisor.se/RestaurantsNear-g4266462-d4389207-Garsnas_Station-Garsnas_Skane_County.html"
+              target="blank"
+            >
+              HÄR
+            </a>
+          </p>
+          <p>
+            <span style={{ fontWeight: "bold" }}>Allergier: </span> För er som
+            har allergier får ni gärna meddela Kjell (emailadress kommer
+            snart...). Middagsbuffén kommer ha gott om veganska och
+            kött-alternativ och kommer att presenteras under dagen.
+          </p>
+
+          <h4>
+            {" "}
+            <FaGlassCheers /> Dryck
+          </h4>
+          <p>
+            Hela lördagen finns det gott om alternativ inkl. alkoholfritt! Alla
+            vinfinsmakare och craft-beer-entusiaster (om ni gillar Pripps)
+            kommer vara nöjda! Bubbel och G&T skall även flöda!
           </p>
         </div>
         <h3>Om Oss</h3>
