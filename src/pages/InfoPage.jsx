@@ -185,7 +185,8 @@ const InfoPage = () => {
             Kort sagt, kommer taxibilar vara "on call" för att köra gäster till
             närliggande hotell, tågstationer eller andra platser runt Österlen.
             Men det är viktigt att ni själva bokar via telefon under kvällens
-            gång!
+            gång! Tänk på att det är ett litet bolag med få taxibilar, så lite
+            tålamod kan behövas <FaHeart />
           </p>
           <h3>
             {" "}
