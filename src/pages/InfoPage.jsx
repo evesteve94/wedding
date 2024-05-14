@@ -257,9 +257,12 @@ const InfoPage = () => {
           </p>
           <p>
             <span style={{ fontWeight: "bold" }}>Allergier: </span> För er som
-            har allergier får ni gärna meddela Kjell (emailadress kommer
-            snart...). Middagsbuffén kommer ha gott om veganska och
-            kött-alternativ och kommer att presenteras under dagen.
+            har allergier får ni gärna meddela Kjell{" "}
+            <a href="mailto:info@casseroll.se">
+              <FaEnvelope /> info@casseroll.se
+            </a>
+            . Middagsbuffén kommer ha gott om veganska och kött-alternativ och
+            kommer att presenteras under dagen.
           </p>
 
           <h4>
