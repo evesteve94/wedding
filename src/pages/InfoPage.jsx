@@ -19,6 +19,7 @@ import {
   FaTree,
   FaUtensils,
 } from "react-icons/fa";
+import welcome from "../assets/img/welcome.png";
 
 const InfoPage = () => {
   return (
@@ -302,7 +303,7 @@ const InfoPage = () => {
           Med Stor Kärlek och Respekt, <br />
           Viktor & Emma
         </h3>
-
+        <img className="homepage-img" src={welcome} alt="" />
         <h3>LET'S A-GOOOO</h3>
       </div>
     </main>
