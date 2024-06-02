@@ -20,6 +20,7 @@ import {
   FaUtensils,
 } from "react-icons/fa";
 import welcome from "../assets/img/welcome.png";
+import map from "../assets/img/map.png";
 
 const InfoPage = () => {
   return (
@@ -203,8 +204,13 @@ const InfoPage = () => {
             <span style={{ fontWeight: "bold" }}>
               OBS! Ta med egna sängkläder!
             </span>{" "}
-            Madrasser, kuddar och täcken finns!
+            Madrasser, kuddar och täcken finns! Se kartan över området undertill
           </p>
+          <img
+            src={map}
+            alt="Karta över Sjöröd"
+            style={{ borderRadius: "0.5rem" }}
+          />
           <p>
             Huvudbyggnaden rymmer tre toaletter, varav en är handikappanpassad.
             Huset är försett med wifi. Intill huvudbyggnaden finns det gamla
