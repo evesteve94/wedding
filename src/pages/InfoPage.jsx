@@ -209,7 +209,7 @@ const InfoPage = () => {
           <img
             src={map}
             alt="Karta över Sjöröd"
-            style={{ borderRadius: "0.5rem" }}
+            style={{ borderRadius: "0.5rem", maxWidth: "350px" }}
           />
           <p>
             Huvudbyggnaden rymmer tre toaletter, varav en är handikappanpassad.
