@@ -153,25 +153,21 @@ const InfoPage = () => {
           </h4>
           <p>
             Eftersom lägerområdet ligger mitt ute i skogen, är det en bit att gå
-            från närmsta busshållplats. Närmaste järnvägsstation ligger i
-            Gärsnäs, 7 kilometer bort. Närmaste busshållplats heter
-            <span style={{ fontWeight: "bold" }}> Gyllebosjövägen</span> och
-            ligger 2 kilometer från lägerområdet. Bussen som går dit heter{" "}
-            <span style={{ fontWeight: "bold" }}>574</span> och avgår från
-            Simrishamns station. Man kan åka Pågatåg från Malmö och Ystad, samt
-            expressbuss från Lund och Kristianstad. Oavsett om du åker tåg eller
-            buss till Simrishamn, ingår alltid resan med buss{" "}
-            <span style={{ fontWeight: "bold" }}>574</span> i priset. <br />{" "}
+            från närmsta busshållplats. OBS OBS OBS - busslinjen existerar inte
+            längre!
             <br />
-            Skjuts från bröllopet till järnvägsstationen på lördag kväll kommer
-            erbjudas! Sista tåget går{" "}
+            Därför kan ni skriva till transportansvarige Kryddan Peterson som
+            kan hämta och lämna er på stationen i Gärsnäs. Ni kan meddela pappa
+            Kryddan på nummer{" "}
+            <span style={{ fontWeight: "bold" }}>070 326 27 62</span>. Det finns
+            även fler som erbjudit att köra till och från stationen, Kryddan
+            löser körschemat. <br />
+            Skjuts från bröllopet till järnvägsstationen i Gärsnäs på lördag
+            kväll kommer erbjudas! Sista tåget går{" "}
             <span style={{ fontWeight: "bold" }}>22:20</span> från Gärsnäs
             järnvägsstation och transport dit avgår{" "}
             <span style={{ fontWeight: "bold" }}>21:50</span>, meddela om Ni
-            behöver transport! Maila till viktorochemma.2024@gmail.com{" "}
-            <a href="mailto:viktorochemma.2024@gmail.com">
-              <FaEnvelope />
-            </a>
+            behöver transport!
           </p>
           <h4>
             {" "}
