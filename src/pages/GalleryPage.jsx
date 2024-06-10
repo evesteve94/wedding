@@ -1,5 +1,11 @@
 import React from "react";
-import { FaImage, FaInfoCircle, FaEnvelope, FaWhatsapp } from "react-icons/fa";
+import {
+  FaImage,
+  FaInfoCircle,
+  FaEnvelope,
+  FaWhatsapp,
+  FaCloud,
+} from "react-icons/fa";
 
 const GalleryPage = () => {
   return (
@@ -14,6 +20,18 @@ const GalleryPage = () => {
         <h3>
           <FaInfoCircle /> Skicka gärna era bilder!
         </h3>
+        <p>
+          Ni får gärna lägga till era bilder i denna Google Drive!! <br />
+          <a
+            href="https://drive.google.com/drive/folders/1IAiS6Ka4O_UGizm8068MKoFTbl99m2e4?usp=sharing"
+            target="blank"
+          >
+            <p style={{ fontSize: "3rem" }}>
+              <FaCloud /> <br />
+            </p>
+            Google Drive
+          </a>
+        </p>
         <p>
           <a href="mailto:94evbj42@gmail.com">
             <FaEnvelope style={{ fontSize: "3rem" }} />
