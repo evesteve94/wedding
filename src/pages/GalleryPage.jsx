@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   FaImage,
   FaInfoCircle,
@@ -6,8 +6,32 @@ import {
   FaWhatsapp,
   FaCloud,
 } from "react-icons/fa";
+import Vigsel from "../components/Vigsel";
+import Fest from "../components/Fest";
+import Rodda from "../components/Rodda";
+import Middag from "../components/Middag";
+import Mingel from "../components/Mingel";
 
 const GalleryPage = () => {
+  const [currentComponent, setCurrentComponent] = useState("Vigsel");
+
+  const renderComponent = () => {
+    switch (currentComponent) {
+      case "Vigsel":
+        return <Vigsel />;
+      case "Mingel":
+        return <Mingel />;
+      case "Middag":
+        return <Middag />;
+      case "Fest":
+        return <Fest />;
+      case "Rodda":
+        return <Rodda />;
+      default:
+        return <div>Välj kategori!</div>;
+    }
+  };
+
   return (
     <main>
       <div className="gallery-page">
@@ -42,6 +66,16 @@ const GalleryPage = () => {
           <FaWhatsapp />
         </p>
         <p>+46 738 774 11 88</p>
+        <br />
+        <p>Välj bland kategorierna! - fler bilder kommer snart!</p>
+        <nav className="gallery-nav">
+          <button onClick={() => setCurrentComponent("Vigsel")}>Vigsel</button>
+          <button onClick={() => setCurrentComponent("Mingel")}>Mingel</button>
+          <button onClick={() => setCurrentComponent("Middag")}>Middag</button>
+          <button onClick={() => setCurrentComponent("Fest")}>Fest</button>
+          <button onClick={() => setCurrentComponent("Rodda")}>Rodda</button>
+        </nav>
+        {renderComponent()}
       </div>
     </main>
   );
